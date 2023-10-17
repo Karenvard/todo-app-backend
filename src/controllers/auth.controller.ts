@@ -11,7 +11,7 @@ import * as jwt from "jsonwebtoken";
 import {userDto} from "../dtos/user.dto";
 import {Todo} from "../models/todo.model";
 import {todoDto} from "../dtos/todo.dto";
-import {TypedRequestAuthBody} from "../interfaces/TypedRequestAuthBody";
+import {TypedRequestAuthBody} from "../interfaces/TypedRequestAuthBody"
 
 function generateAccessToken(id: string, username: string, rememberMe: boolean) {
     const payload = {id, username, rememberMe};

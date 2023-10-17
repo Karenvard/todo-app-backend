@@ -8,7 +8,7 @@ export const router = Router();
 router.post("/signup", [
     check("username", "Username field can not be empty").notEmpty(),
     check("username", "Username must contain not less than 4 characters").isLength({min: 4}),
-    check("username", "Username must contain up to 15 characters").isLength({max: 15}),
+    check("username", "Username must contain up to 13 characters").isLength({max: 13}),
     check("email", "Email field can not be empty").notEmpty(),
     check("email", "Email field value is not valid email").isEmail(),
     check("password", "Password field can not be empty").notEmpty(),
@@ -20,7 +20,7 @@ router.get("/user", authMiddleware, authController.getUser)
 router.get("/todos", authMiddleware, authController.getTodos);
 router.post("/todos", authMiddleware, [
     check("body", "Task text can not be empty").notEmpty(),
-    check("body", "Task text must contains less than 75 characters").isLength({max: 75}),
+    check("body", "Task text must contains less than 50 characters").isLength({max: 50}),
     check("color", "Task color must be type hex color.").isHexColor()
 ], authController.addTodo);
 router.put("/todos/:id", [
