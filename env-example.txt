@@ -1,4 +1,0 @@
-SERVER_PORT=port (example: 5555)
-SERVER_HOST=url (example: http://localhost:5555)
-MONGO_URI=mongo uri for connect to database
-SECRET_KEY=secret key (password) for jsonwebtoken
