@@ -41,10 +41,10 @@ var mongoose_1 = require("mongoose");
 var express_1 = require("express");
 var cors_1 = require("cors");
 var router_1 = require("./router");
-var app = (0, express_1.default)();
+var app = express_1();
 (0, dotenv_1.config)({});
-app.use((0, cors_1.default)({}));
-app.use(express_1.default.json());
+app.use(cors_1({}));
+app.use(express_1.json());
 app.use(router_1.router);
 function start() {
     return __awaiter(this, void 0, void 0, function () {
